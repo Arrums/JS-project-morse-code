@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Morse Code Translator - Arrum</title>
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__title">Morse Code Translator</h1>
+		</header>
+		<main class="translator">
+			<section class="translator__input">
+				<label for="engInp">English</label>
+				<textarea
+					id="eng"
+					cols="30"
+					rows="3"
+					placeholder="Type your English text in here."
+				></textarea>
+				<div class="translator__input__wrapper">
+					<button id="btnEng" class="translator__input__btn">Translate</button>
+					<button id="clrEng" class="translator__input__btn">Clear</button>
+				</div>
+			</section>
+			<section class="translator__input">
+				<label for="morseInp">Morse Code</label>
+				<textarea
+					id="morse"
+					cols="30"
+					rows="3"
+					placeholder="Type your morse code in here."
+				></textarea>
+				<div class="translator__input__wrapper">
+					<button id="btnMorse" class="translator__input__btn">
+						Translate
+					</button>
+					<button id="clrMor" class="translator__input__btn">Clear</button>
+				</div>
+			</section>
+		</main>
+
+		<section class="reference">
+			<h2>Reference</h2>
+			<div class="reference__chart">
+				<img
+					src="https://i.pinimg.com/originals/cc/c6/16/ccc616530cd1089adc160b4beaa0444a.png"
+				/>
+			</div>
+		</section>
+		<script type="module" src="index.js"></script>
+	</body>
+</html>

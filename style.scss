@@ -1,0 +1,181 @@
+@use "./partials/pallette";
+@use "./partials/mediaquery";
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
+
+@mixin flexing(
+	$just-cont: center,
+	$ali-itms: center,
+	$flex-dir: row,
+	$flex-wr: nowrap
+) {
+	display: flex;
+	justify-content: $just-cont;
+	align-items: $ali-itms;
+	flex-direction: $flex-dir;
+	flex-wrap: $flex-wr;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: pallette.$beau-blue;
+	width: 100%;
+	height: 100vh;
+}
+
+textarea {
+	resize: none;
+	border: none;
+	height: 300px;
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	font-size: 18px;
+	margin-bottom: 3vh;
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
+	}
+}
+
+label {
+	margin-bottom: 2vh;
+	font-size: 27px;
+	font-family: "Inter", sans-serif;
+	font-weight: 600;
+	color: pallette.$dark-cornflower-blue;
+
+	@media only screen and (max-width: mediaquery.$phone) {
+		font-size: 20px;
+	}
+}
+
+.header {
+	margin: 2vh 0 8vh 0;
+
+	&__title {
+		font-family: "Limelight", cursive;
+		text-align: center;
+		color: pallette.$dark-cornflower-blue;
+		font-size: 70px;
+		font-weight: 500;
+		margin: 2% auto;
+	}
+
+	@media only screen and (min-width: (mediaquery.$phone + 1)) and (max-width: mediaquery.$pc) {
+		margin: 4vh 0;
+
+		&__title {
+			font-size: 55px;
+		}
+	}
+
+	@media only screen and (max-width: mediaquery.$phone) {
+		&__title {
+			font-size: 35px;
+			margin: 2%;
+		}
+	}
+}
+
+.translator {
+	width: 85vw;
+	margin: auto;
+	@include flexing($just-cont: space-between);
+
+	&__input {
+		width: 46%;
+		margin-bottom: 8vh;
+		@include flexing($ali-itms: flex-start, $flex-dir: column, $flex-wr: wrap);
+
+		&__wrapper {
+			width: 450px;
+			height: auto;
+			@include flexing($just-cont: space-between, $flex-wr: wrap);
+		}
+
+		&__btn {
+			font-family: "Inter", sans-serif;
+			border: none;
+			border-radius: 10px;
+			height: 40px;
+			width: 200px;
+			font-size: 16px;
+			color: pallette.$white;
+			background-color: pallette.$dark-cornflower-blue;
+			box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	@media only screen and (min-width: (mediaquery.$phone + 1)) and (max-width: mediaquery.$pc) {
+		@include flexing($flex-dir: column);
+
+		&__input {
+			width: 90%;
+			margin-bottom: 8vh;
+
+			&__btn {
+			}
+		}
+	}
+
+	@media only screen and (max-width: mediaquery.$phone) {
+		@include flexing($flex-dir: column, $flex-wr: wrap);
+		width: 80%;
+
+		&__input {
+			width: 90%;
+			margin-bottom: 30px;
+
+			&__wrapper {
+				@include flexing($just-cont: space-between);
+				width: 70%;
+			}
+
+			&__btn {
+				height: 30px;
+				width: 90px;
+				font-size: 12px;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+.reference {
+	> h2 {
+		color: pallette.$dark-cornflower-blue;
+		font-family: "Limelight", cursive;
+		font-size: 50px;
+		font-weight: 500;
+		text-align: center;
+		margin: 5vh auto;
+	}
+
+	&__chart {
+		color: pallette.$dark-cornflower-blue;
+		margin: 4vh 2vw;
+		@include flexing;
+		padding-bottom: 30px;
+	}
+
+	@media only screen and (max-width: mediaquery.$phone) {
+		> h2 {
+			font-size: 30px;
+		}
+
+		&__chart {
+			padding-bottom: 25px;
+			margin: 0 2vw;
+			> img {
+				width: 87%;
+			}
+		}
+	}
+}
