@@ -17,11 +17,7 @@ export const validChar = (text) => {
 		.split("")
 		.map((ch) => engMorse[ch]);
 
-	if (checkArr.includes(undefined)) {
-		return true;
-	} else {
-		return false;
-	}
+	return checkArr.includes(undefined);
 };
 
 //function for translation morse to eng
@@ -37,9 +33,5 @@ export const turnEng = (text) => {
 export const validMors = (text) => {
 	const arrCheck = text.split(" ").map((c) => morseEng[c]);
 
-	if (arrCheck.includes(undefined)) {
-		return true;
-	} else {
-		return false;
-	}
+	return arrCheck.includes(undefined);
 };
