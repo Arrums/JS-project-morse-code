@@ -7,11 +7,10 @@ const btnEng = document.querySelector("#btnEng");
 const btnMorse = document.querySelector("#btnMorse");
 const btnClrEng = document.querySelector("#clrEng");
 const btnClrMor = document.querySelector("#clrMor");
-const codeChart = document.querySelector(".reference__chart");
 
 //Event listener for English Translate Btn
 btnEng.addEventListener("click", () => {
-	if (transFunc.validChar(engInput.value)) {
+	if (transFunc.va(engInput.value)) {
 		return alert(
 			"Error: Text include characters that doesn't exist in Morse code (such as ~,`, <, >, {, }, |, *). Kindly remove it. ",
 		);
@@ -28,7 +27,7 @@ btnClrEng.addEventListener("click", () => {
 btnMorse.addEventListener("click", () => {
 	if (transFunc.validMors(morseInput.value)) {
 		return alert(
-			"Error: This morse code is unrecognizable. Please ensure that it only consists of ., -, space and it is the right sequence.",
+			"Error: Please ensure that the code only consists of ., -, space, put space after each word, and it is the right sequence.",
 		);
 	}
 
