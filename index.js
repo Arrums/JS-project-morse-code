@@ -10,9 +10,9 @@ const btnClrMor = document.querySelector("#clrMor");
 
 //Event listener for English Translate Btn
 btnEng.addEventListener("click", () => {
-	if (transFunc.va(engInput.value)) {
+	if (transFunc.validChar(engInput.value)) {
 		return alert(
-			"Error: Text include characters that doesn't exist in Morse code (such as ~,`, <, >, {, }, |, *). Kindly remove it. ",
+			"Error: Text include characters that doesn't exist in Morse code (such as ~,`, <, >, {, }, |, *, ^, %). Kindly remove it.",
 		);
 	}
 	morseInput.value = transFunc.beMorse(engInput.value);
@@ -27,7 +27,7 @@ btnClrEng.addEventListener("click", () => {
 btnMorse.addEventListener("click", () => {
 	if (transFunc.validMors(morseInput.value)) {
 		return alert(
-			"Error: Please ensure that the code only consists of ., -, space, put space after each word, and it is the right sequence.",
+			"Error: Please ensure that the code only consists of ., -, space and always put space after each letter.",
 		);
 	}
 

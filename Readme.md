@@ -2,7 +2,7 @@
 
 Create a website of morse code translator using HTML, SCSS, and Javascript.
 
-![Morse Code Translator](https://user-images.githubusercontent.com/100544967/161428235-90e1c85a-ddbe-4c85-875b-05dbbd0fd7ee.PNG)
+![Morse Code Translator](https://user-images.githubusercontent.com/100544967/161904325-014bb7cd-b1f6-41ae-8d2a-3dec45229d97.PNG)
 
 [Live Project](https://arrums.github.io/JS-project-morse-code)
 
