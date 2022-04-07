@@ -2,14 +2,14 @@
 
 Create a website of morse code translator using HTML, SCSS, and Javascript.
 
-![Morse Code Translator](https://user-images.githubusercontent.com/100544967/161904325-014bb7cd-b1f6-41ae-8d2a-3dec45229d97.PNG)
+![Morse Code Translator](https://user-images.githubusercontent.com/100544967/162129684-c2f2e22f-9b97-4551-ad96-87d1d8c777c9.PNG)
 
-[Live Project](https://arrums.github.io/JS-project-morse-code)
+<a href="https://arrums.github.io/JS-project-morse-code" target="_blank">Live Project</a>
 
 ## Goals
 
 Implementing the Javascript topics that I have learned through out the training
-such as Arrays, Iterators, Document Object Model (DOM), Object and Modules.
+such as Arrays, Iterators, Document Object Model (DOM), Object, Modules, and Unit Testing.
 
 ## Requirements
 
@@ -29,13 +29,20 @@ such as Arrays, Iterators, Document Object Model (DOM), Object and Modules.
 2. Style the page using SCSS. Ensuring the design to be responsive to different
    screen sizes
 3. Create a separate file for the Morse Code dictionary
-4. Grabbing the elements from HTML using DOM
-5. Create addEventListener and functions for each of the buttons
-6. Ensuring that only certain characters can be accepted in the text boxes
-7. Create reference sheet for the user at the bottom of the page
+4. Create translation function and test them
+5. Grabbing the elements from HTML using DOM
+6. Create addEventListener and functions for each of the buttons
+7. Ensuring that only certain characters can be accepted in the text boxes
+8. Create reference sheet for the user at the bottom of the page
 
 ## Design choice
 
 I chose use button and click() instead of input() for the translation so the
 user would have more control on what they want to type prior the text being
 translated.
+
+## Tech Stack:
+- [x] HTML
+- [x] CSS/SCSS
+- [x] Javascript
+- [x] Jest
