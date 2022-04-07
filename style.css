@@ -26,6 +26,11 @@ textarea:focus {
   outline: none;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
 }
+@media only screen and (max-width: 500px) {
+  textarea {
+    font-size: 12px;
+  }
+}
 
 label {
   margin-bottom: 2vh;
@@ -164,6 +169,11 @@ label {
   flex-wrap: nowrap;
   padding-bottom: 30px;
 }
+@media only screen and (min-width: 501px) and (max-width: 1024px) {
+  .reference__chart > img {
+    width: 85%;
+  }
+}
 @media only screen and (max-width: 500px) {
   .reference > h2 {
     font-size: 30px;
@@ -173,6 +183,6 @@ label {
     margin: 0 2vw;
   }
   .reference__chart > img {
-    width: 87%;
+    width: 90%;
   }
 }

@@ -42,6 +42,10 @@ textarea {
 		outline: none;
 		box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
 	}
+
+	@media only screen and (max-width: mediaquery.$phone) {
+		font-size: 12px;
+	}
 }
 
 label {
@@ -119,9 +123,6 @@ label {
 		&__input {
 			width: 90%;
 			margin-bottom: 8vh;
-
-			&__btn {
-			}
 		}
 	}
 
@@ -165,6 +166,12 @@ label {
 		padding-bottom: 30px;
 	}
 
+	@media only screen and (min-width: (mediaquery.$phone + 1)) and (max-width: mediaquery.$pc) {
+		&__chart > img {
+			width: 85%;
+		}
+	}
+
 	@media only screen and (max-width: mediaquery.$phone) {
 		> h2 {
 			font-size: 30px;
@@ -174,7 +181,7 @@ label {
 			padding-bottom: 25px;
 			margin: 0 2vw;
 			> img {
-				width: 87%;
+				width: 90%;
 			}
 		}
 	}

@@ -8,7 +8,7 @@ describe("Testing beMorse() that translate English text to Morse ", () => {
 	it("should translate a single English character", () => {
 		expect(beMorse("r")).toBe(".-.");
 		expect(beMorse("s")).toBe("...");
-		expect(beMorse(1)).toBe(".----");
+		expect(beMorse("1")).toBe(".----");
 	});
 
 	it("should convert a space between words to /", () => {
